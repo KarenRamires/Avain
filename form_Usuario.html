@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Loja Virtual</title>
+		<link rel="stylesheet" type="text/css" href="css/site.css">
+		<link rel="stylesheet" type="text/css" href="css/carousel.css">
+		
+		<!-- This demo works with jquery library -->
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+		<script type="text/javascript" src="js/carousel.js"></script>	
+		
+		<script type="text/javascript" src="js/valida.js"></script>
+	</head>
+		
+	<body>	
+		<div class="page-wrap">
+			<nav class="nav">
+                <ul style="display:inline-block;">
+                    <li>
+                        <a href="index.php">Inicio</a><li>
+                        <a href="login.html">Logar</a>
+                        <a href="listaAtividades.html">Atividades</a>
+                        <a href="listaAlunos.html">Alunos</a>
+                        <a href="cadastrar.html">Cadastrar</a>
+                        <a href="cadastrar.html">Cadastrar</a>
+                        <a href="gerar.html">Gerar</a></li>
+                </ul>
+                <br />
+            </nav>
+<div>
+				<br />
+				<table style="width:100%">
+					<tbody>
+					<tr>
+						<td style="width:70%">
+							<input id="inputPesquisar" type="text">
+						</td>
+						<td>
+							<input style="height:20px;" class="button-small-full" value="Pesquisar" type="button" />
+						</td>
+					</tr>
+				</tbody>
+				</table>
+			</div>		
+			<br />
+
+						
+			<br />
+			<div style="background:#FDF3E7;padding:10px;border-radius:10px;">
+			<form method="POST" action="insert_Usuario.php"> 
+			<fieldset> <legend> Registro Novo Usuário</legend>
+					<table>
+						<tr><td>Login: </td><td><input type="text" name="nome" value=" " placeholder="até 8 caracteres" required></td></tr>
+						<tr><td>email: </td><td><input type="text" name="email" placeholder="nome@servidor.com.br"required onKeyPress="validaEmail(form.email);" onBlur="validaEmail(form.email);"></td></tr>
+						<tr><td>senha: </td><td><input id="datanasc" type="password" name="datanasc" value=" " placeholder="DD/MM/AAAA"required onKeyPress="mascaraData(form.data);"onBlur="validaData(form.data);"></td></tr>
+					</table>
+			</fieldset>
+				<tr><td></td><td><input type=submit value=REGISTRAR></td></tr>
+			</div>			
+					
+			</form>
+			
+		</div>
+			
+		<footer class="site-footer">
+			Site: Loja Virtual
+			<br />
+			<a class="link" href="FaleConosco.html">Fale Conosco</a>
+		</footer>
+	</body>
+</html>
